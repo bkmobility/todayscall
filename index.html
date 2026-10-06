@@ -38,6 +38,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,42,0.9
 .stat-num{font-family:'Montserrat','Noto Sans KR',sans-serif;font-size:28px;font-weight:900;color:var(--gold);display:block;}
 .stat-label{font-size:12px;color:rgba(255,255,255,0.55);font-weight:600;}
 .hero-visual{display:flex;justify-content:center;align-items:center;position:relative;}
+.hero-visual-m{display:none;}
 .phone-mockup{width:280px;background:linear-gradient(160deg,#17304a,#0D1B2A);border-radius:40px;padding:20px 16px;box-shadow:0 40px 100px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.1);position:relative;animation:float 4s ease-in-out infinite;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
 .phone-glow{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.3),transparent);top:-40px;right:-40px;z-index:-1;}
@@ -130,7 +131,7 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:48px 5%;}
 .footer-links a:hover{color:#fff;}
 .footer-bottom{max-width:1200px;margin:32px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .footer-bottom p{font-size:12px;}
-@media(max-width:900px){.hero-grid{grid-template-columns:1fr;}.hero-visual{margin-top:20px;padding-bottom:16px;}.features-grid,.ocr-steps,.backup-cards,.support-cards{grid-template-columns:1fr 1fr;}.guide-steps{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;}.hero-visual{display:none;}.hero-visual-m{display:flex;justify-content:center;margin:0 0 36px;}.features-grid,.ocr-steps,.backup-cards,.support-cards{grid-template-columns:1fr 1fr;}.guide-steps{grid-template-columns:1fr 1fr;}.nav-links{display:none;}}
 @media(max-width:600px){section{padding:64px 5%;}.features-grid,.ocr-steps,.backup-cards,.support-cards,.guide-steps{grid-template-columns:1fr;}.hero-stats{gap:20px;}.privacy-content{padding:28px 20px;}}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
@@ -188,6 +189,35 @@ footer{background:var(--navy);color:rgba(255,255,255,0.5);padding:48px 5%;}
       <h1>오늘의<br><span>대리</span></h1>
       <p class="hero-sub">출발지 · 도착지 · 경유지 · 예상 금액 · 경로 공유</p>
       <p>출발지와 도착지만 정하면 거리, 소요시간, 예상 금액을 미리 확인하고 바로 호출할 수 있습니다. 경유지 추가와 경로 이미지 공유까지, 대리운전 이용에 필요한 기능을 한 앱에 담았습니다.</p>
+      <div class="hero-visual-m"><div class="tcp">
+ <div class="hd">
+  <svg class="pin" viewBox="0 0 24 24"><path d="M12 1.5c-4.4 0-8 3.4-8 7.7C4 15 12 22.5 12 22.5s8-7.5 8-13.3c0-4.3-3.6-7.7-8-7.7z" fill="#C9A84C"/><circle cx="12" cy="9.3" r="4.3" fill="none" stroke="#0D1B2A" stroke-width="1.6"/><circle cx="12" cy="9.3" r="1.5" fill="#0D1B2A"/></svg>
+  <b>오늘의 대리</b>
+  <small>안전한 귀갓길,<br><i>오늘의 대리</i>가 함께합니다</small>
+ </div>
+ <div class="map">
+  <svg viewBox="0 0 280 118" width="100%" height="118">
+   <rect width="280" height="118" fill="#EEEBE2"/>
+   <rect x="196" y="0" width="34" height="118" fill="#BFD9EC"/>
+   <rect x="232" y="0" width="48" height="118" fill="#DCE8D0"/>
+   <g stroke="#fff" stroke-width="7" fill="none"><path d="M0 70 L280 40"/><path d="M80 0 L110 118"/><path d="M0 105 L190 92"/></g>
+   <path d="M0 70 L280 40" stroke="#E8D18A" stroke-width="5" fill="none"/>
+   <path d="M140 52 C170 38 200 30 262 22" stroke="#1F5EFF" stroke-width="3" stroke-dasharray="6 4" fill="none" stroke-linecap="round"/>
+   <circle cx="262" cy="22" r="5" fill="#C9A84C"/>
+   <path d="M140 52c-6-8-9-13-9-18a9 9 0 0118 0c0 5-3 10-9 18z" fill="#2F6BC4" transform="translate(0,-4)"/><circle cx="140" cy="26" r="3.2" fill="#fff"/>
+  </svg>
+ </div>
+ <div class="card">
+  <div class="row"><div class="dot" style="background:#EAF1FF">🔵</div><div><b>출발지 <em>현재 출발지와 다른 경우 검색</em></b><span>익성빌딩 · 서울 강남구 삼성동</span></div></div>
+  <div class="row"><div class="dot" style="background:#FFF0E6">📍</div><div><b>목적지 <em>터치해서 목적지 검색</em></b><span>주소·건물명으로 검색</span></div><div class="via">+ 경유지<br><span style="color:#7A5C12;font-size:7px">선택·최대 2곳</span></div></div>
+ </div>
+ <div class="stats">
+  <div class="st">예상 소요시간<b>— 분</b></div><div class="st">예상 이동 거리<b>— km</b></div><div class="st">예상 금액<b>— 원</b></div>
+  <div class="st p">현재 마일리지<b>5,000 P</b></div><div class="st k">앱 추천하기</div><div class="st k">주위에 경로 공유</div>
+ </div>
+ <div class="fl"><div class="img">💐</div><div><b>전국 꽃배달 서비스</b><span>경조사 · 기념일 꽃 주문</span></div><span style="color:#7A5C12;font-size:12px">›</span></div>
+ <div class="cta"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 1.5c-4.4 0-8 3.4-8 7.7C4 15 12 22.5 12 22.5s8-7.5 8-13.3c0-4.3-3.6-7.7-8-7.7z" fill="#C9A84C"/></svg>오늘의 대리 호출하기</div>
+</div></div>
       <div class="hero-btns">
         <a href="#" class="btn-primary">▶ 구글 플레이 스토어</a>
         <a href="#guide" class="btn-secondary">📖 사용방법 보기</a>
